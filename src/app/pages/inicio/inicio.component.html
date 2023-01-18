@@ -8,7 +8,7 @@
   <mat-drawer-content>
     <app-consulta-cpf (formValidado)="iniciarCadastro($event)" ></app-consulta-cpf>
     <div class="botoes">
-      <button mat-raised-button (click)="drawer.toggle()" class="botoes__escuro" *ngIf="iniciarAdmissao">Iniciar nova admissão</button>
+      <button mat-raised-button routerLink="dados-cadastrais"  class="botoes__escuro" *ngIf="iniciarAdmissao">Iniciar nova admissão</button>
       <button mat-raised-button (click)="drawer.toggle()" class="botoes__claro">Dicas Para Abertura da Conta</button>
     </div>
   </mat-drawer-content>
