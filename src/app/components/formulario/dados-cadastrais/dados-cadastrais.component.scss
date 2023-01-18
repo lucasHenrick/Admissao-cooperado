@@ -1,0 +1,111 @@
+.title {
+  margin: 25px;
+  & span{
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+  & h2 {
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
+}
+p{
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 25px;
+}
+.personal-image {
+  text-align: center;
+  margin-right: 25px;
+}
+.personal-image input[type="file"] {
+  display: none;
+}
+.personal-figure {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+.personal-avatar {
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+  box-sizing: border-box;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  transition: all ease-in-out .3s;
+}
+.personal-avatar:hover {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.personal-figcaption {
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  width: inherit;
+  height: inherit;
+  border-radius: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all ease-in-out .3s;
+}
+.personal-figcaption:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, .5);
+}
+.personal-figcaption > img {
+  margin-top: 32.5px;
+  width: 50px;
+  height: 50px;
+}
+
+form {
+  display: flex;
+  .formulario-1{
+    display: flex;
+    flex-direction: column;
+    div{
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+
+
+input, select {
+  margin-right: 15px;
+  display: block;
+}
+
+.formulario-2{
+  display: flex;
+  margin: 0 25px 10px 25px;
+  align-items: flex-end;
+  gap: 20px;
+  .check{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    .check__valor {
+      width: auto;
+      display: flex;
+    }
+  }
+}
+.pessoal{
+  margin: 35px;
+}
+
+.botoes{
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  button {
+    cursor: pointer;
+    margin: 20px;
+  }
+}
+
+

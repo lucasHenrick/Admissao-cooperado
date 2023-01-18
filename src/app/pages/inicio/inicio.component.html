@@ -1,0 +1,15 @@
+<mat-drawer-container [hasBackdrop]="true" class="bloco">
+  <mat-drawer #drawer class="drawer"  position="end">
+    <app-informativo-conta></app-informativo-conta>
+    <div class="botoes">
+      <button mat-raised-button (click)="drawer.toggle()" class="botoes__claro">Continuar atendimento</button>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-consulta-cpf (formValidado)="iniciarCadastro($event)" ></app-consulta-cpf>
+    <div class="botoes">
+      <button mat-raised-button (click)="drawer.toggle()" class="botoes__escuro" *ngIf="iniciarAdmissao">Iniciar nova admissão</button>
+      <button mat-raised-button (click)="drawer.toggle()" class="botoes__claro">Dicas Para Abertura da Conta</button>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

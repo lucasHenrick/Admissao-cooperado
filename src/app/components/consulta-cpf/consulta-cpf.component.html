@@ -1,0 +1,13 @@
+<div>
+  <h2>Informe o CPF do futuro cooperado (a)</h2>
+  <span>Se necessário, você poderá duplicar uma conta existente ou pausar o retorno este cadastri futuramente</span>
+  <span>Digite apenas os números (sem pontos ou traços)</span>
+</div>
+<form #form="ngForm">
+  <label>CPF
+    <input [ngClass]="msgErro ? 'errorCPF' : ''" type="text" placeholder="000.000.000-00" maxlength="11" name="cpf" ngModel  #cpf="ngModel" >
+  </label>
+  <button type="button" (click)="isValidCPF(cpf.value)" >Consulta por CPF</button>
+</form>
+<span class="errorMsg" *ngIf="msgErro">Informe um CPF Válido</span>
+<app-card-infomacao-usuario *ngIf="msgErro === false && cpf.value"></app-card-infomacao-usuario>

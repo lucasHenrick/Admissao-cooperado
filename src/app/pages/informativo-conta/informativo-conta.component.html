@@ -1,0 +1,33 @@
+<div class="informacoes">
+  <h1>Check-list para <br>abertura da conta</h1>
+  <p>Confira algumas dicas que irão lhe ajudar neste adentimento para que a admissão aconteçã da melhor forma possivel</p>
+  <form #form="ngForm">
+    <div>
+      <input type="checkbox" name="campo1" #campo1="ngModel" ngModel>  <span> Conheça seu cooperado </span>
+        <ul *ngIf="campo1.value">
+          <li> O que traz você até a cooperativa?</li>
+          <li> O que é mais importante na sua vida?</li>
+          <li> Você tem algum sonho?</li>
+        </ul>
+      </div>
+      <br>
+      <div>
+        <input type="checkbox" name="campo2" #campo2="ngModel" ngModel> <span> Fale sobre a Cooperativa</span>
+          <ul *ngIf="campo2.value">
+            <li> Modelo de Negócio: direto a voto, transparência na gestão, PROGRID, retorno das sobras, taxas atrativas</li>
+            <li> Rede de Atendimento: App, Conta Online, Sac, Caixas Eletrôniucos (compartilhados entre as Cooperativas), Postos de Atendimentos</li>
+            <li> Você tem algum sonho?</li>
+          </ul>
+      </div>
+      <br>
+      <input type="checkbox" name="campo3" #campo3="ngModel" ngModel> <span> Documentos e comprovações necessárias</span>
+      <div>
+        <ul *ngIf="campo3.value">
+          <li> CPF regular na Receita Federal;</li>
+          <li> Documento de identificação(RG,CNH,Carteira de trabalho, RNM, Carteira Profissional, Passaporte Brasileiro);</li>
+          <li> Comprovante de endereço;</li>
+          <li> Comprovante de renda;</li>
+        </ul>
+      </div>
+  </form>
+</div>
